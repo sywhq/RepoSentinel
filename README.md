@@ -71,12 +71,6 @@ Supported severities: `critical`, `high`, `medium`, `low`, `info`.
 - SARIF output for GitHub code scanning.
 - Web UI for scan reports.
 
-## Table Entry
-
-| Name | Platform | URL |
-| --- | --- | --- |
-| RepoSentinel: Lightweight Repository Security Self-Check Tool | GitHub/Gitee | https://github.com/your-name/RepoSentinel |
-
 ## License
 
 MIT License
