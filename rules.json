@@ -1,0 +1,44 @@
+[
+  {
+    "id": "private-key",
+    "name": "Private key block",
+    "severity": "critical",
+    "pattern": "-----BEGIN (RSA |DSA |EC |OPENSSH |PGP )?PRIVATE KEY-----",
+    "description": "A private key appears to be committed."
+  },
+  {
+    "id": "aws-access-key",
+    "name": "AWS access key",
+    "severity": "high",
+    "pattern": "\\bAKIA[0-9A-Z]{16}\\b",
+    "description": "Possible AWS access key ID."
+  },
+  {
+    "id": "github-token",
+    "name": "GitHub token",
+    "severity": "high",
+    "pattern": "\\bgh[pousr]_[A-Za-z0-9_]{20,}\\b",
+    "description": "Possible GitHub personal access token."
+  },
+  {
+    "id": "password-field",
+    "name": "Hard-coded password field",
+    "severity": "medium",
+    "pattern": "(?i)\\b(password|passwd|pwd)\\b\\s*[:=]\\s*[\\\"']?[^\\\"'\\s]{6,}",
+    "description": "A password-like value is hard-coded."
+  },
+  {
+    "id": "secret-field",
+    "name": "Hard-coded secret field",
+    "severity": "medium",
+    "pattern": "(?i)\\b(secret|token|api[_-]?key|access[_-]?key)\\b\\s*[:=]\\s*[\\\"']?[^\\\"'\\s]{8,}",
+    "description": "A secret-like value is hard-coded."
+  },
+  {
+    "id": "database-url",
+    "name": "Database connection URL",
+    "severity": "medium",
+    "pattern": "(?i)\\b(mysql|postgres|postgresql|mongodb|redis)://[^\\s\\\"']+",
+    "description": "A database connection string may contain credentials."
+  }
+]

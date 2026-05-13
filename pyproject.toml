@@ -1,0 +1,18 @@
+[project]
+name = "reposentinel"
+version = "0.2.0"
+description = "A lightweight repository security self-check tool."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "RepoSentinel Contributors" }
+]
+keywords = ["security", "secrets", "repository", "scanner", "static-analysis"]
+
+[project.scripts]
+reposentinel = "reposentinel.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
